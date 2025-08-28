@@ -1,0 +1,48 @@
+def _format_data(self, data, indent=2):
+
+    """Recursively format nested lists so rows are on one line."""
+    if not isinstance(data, list):
+        return f"{data:.4g}"  # scalar format
+    if len(data) == 0:
+        return "[]"
+
+    # If elements are scalars, print them on one line
+    if not isinstance(data[0], list):
+        return "[" + "  ".join(f"{v:.4g}" for v in data) + "],"
+
+    # If elements are lists, recurse and indent
+    inner_indent = " " * indent
+    parts = [self._format_data(item, indent + 2) for item in data]
+    return "[" + ("\n" + inner_indent).join(parts) + "]"
+
+    data_str = self._format_data(self.data)
+    return f"Tensor(shape={self.shape},\n  {data_str}\n)"
+
+# if isinstance(other, Tensor):
+#     other = other.data
+#     if self.shape != self._get_shape(other):
+#         raise ValueError(f"Shape mismatch: {self.shape} vs {self._get_shape(other)}")
+# return Tensor(self._apply_elementwise(self.data, other, op))
+
+
+def build(s):
+    if len(s) == 1:  # last dimension
+        return [random.random() for _ in range(s[0])]
+    return [build(s[1:]) for _ in range(s[0])]
+return cls(build(shape))
+
+def _check_rectangular(self, data):
+    if isinstance(data, list):
+        # Check all elements have same type as first element
+        if not all(isinstance(x, type(data[0])) for x in data):
+            raise ValueError("Inconsistent nesting in tensor data")
+
+        # If all elements are lists, verify their lengths and recurse
+        if all(isinstance(x, list) for x in data):
+            first_len = len(data[0])
+            for sub in data:
+                if len(sub) != first_len:
+                    raise ValueError("Ragged tensor: inconsistent sublist lengths")
+            # Recursively check each sublist
+            for sub in data:
+                self._check_rectangular(sub)

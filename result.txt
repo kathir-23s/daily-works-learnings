@@ -1,0 +1,1377 @@
+=== Test 1: TensorT ops ===
+a+b = [[6.0, 8.0], [10.0, 12.0]]
+a*b = [[5.0, 12.0], [21.0, 32.0]]
+a-b = [[-4.0, -4.0], [-4.0, -4.0]]
+a/b = [[0.2, 0.3333333333333333], [0.42857142857142855, 0.5]]
+
+=== Test 2: Activations ===
+Sigmoid(0) = 0.5
+ReLU(-1) = 0 ReLU(2) = 2
+Tanh(0) = 0.0
+
+=== Test 3: Loss functions ===
+Manual BCE: 0.2231435513142097  | Tensor BCE: 0.2231435513142097
+
+=== Test 4: Forward pass ===
+MLP initialized successfully.
+  - Architecture: [2, 2, 1]
+  - Hidden Activation: relu
+  - Output Activation (from loss): sigmoid
+  - Weight Initialization: he_normal
+  - Loss Function: binary_cross_entropy_loss
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Forward output: tensor:
+[[0.08745969005960243]], shape: (1, 1)
+
+=== Test 5: Gradient check ===
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Gradient diff (should be ~1e-7): 366564332.17731386
+
+=== Test 6: Training ===
+MLP initialized successfully.
+  - Architecture: [2, 4, 3, 1]
+  - Hidden Activation: relu
+  - Output Activation (from loss): sigmoid
+  - Weight Initialization: he_normal
+  - Loss Function: binary_cross_entropy_loss
+
+--- Starting Training for 50 epochs ---
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Epoch    0 | Cost: 0.791766
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Epoch   10 | Cost: 0.798812
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Epoch   20 | Cost: 0.806544
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Epoch   30 | Cost: 0.815067
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Epoch   40 | Cost: 0.824509
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Epoch   49 | Cost: 0.833898
+--- Training Finished in 0.26 seconds ---
+Initial A type: <class 'TensorT.tensor_scratch.TensorT'>
+Initial A class: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 1:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 2:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+
+Layer 3:
+  W type: <class 'TensorT.tensor_scratch.TensorT'>
+  A type: <class 'TensorT.tensor_scratch.TensorT'>
+  isinstance(W, TensorT): True
+  isinstance(A, TensorT): True
+  After activation A type: <class 'TensorT.tensor_scratch.TensorT'>
+Final training accuracy: 0.195
