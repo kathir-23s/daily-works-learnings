@@ -1,18 +1,18 @@
 
 import math
-from matmul_c_tensorT import TensorT
+from tensorT_v3 import TensorT
 
 class ActivationFunction:
     
     @staticmethod
-    def sigmoid(z):
+    def sigmoid(z, req_grad=False):
         """Computes the sigmoid of z."""
         z_clip = z.tclip(-500, 500)
         exp_neg_z = (-z_clip).texp()
         ones = TensorT.unit_tensor(1.0, exp_neg_z.shape)
         result_data = (ones / (ones + exp_neg_z)).data
 
-        out = TensorT(result_data, _op='sigmoid', _parent=(z,))
+        out = TensorT(result_data, _op='sigmoid', _parent=(z,), req_grad=req_grad)
 
         def backward_fn(grad_op):
             s_data = result_data
@@ -23,10 +23,10 @@ class ActivationFunction:
         return out
 
     @staticmethod
-    def relu(z):
+    def relu(z, req_grad=False):
         """Computes the Rectified Linear Unit of z."""
         result_data = z._apply_unary(z.data, lambda x: max(0, x))
-        out = TensorT(result_data, _op='relu', _parent=(z,))
+        out = TensorT(result_data, _op='relu', _parent=(z,), req_grad=req_grad)
 
         def backward_fn(grad_op):
             grad_self = z._apply_elementwise(grad_op, z.data, lambda g, x: g if x > 0 else 0)
@@ -37,14 +37,14 @@ class ActivationFunction:
 
 
     @staticmethod
-    def tanh(z):
+    def tanh(z, req_grad=False):
         """Computes the hyperbolic tangent of z."""
         two_x = z * 2
         exp_2x = two_x.texp()
         ones = TensorT.unit_tensor(1.0, exp_2x.shape)
         tanh_data = ((exp_2x - ones) / (exp_2x + ones)).data
 
-        out = TensorT(tanh_data, _op='tanh', _parent=(z,))
+        out = TensorT(tanh_data, _op='tanh', _parent=(z,), req_grad=req_grad)
 
         def backward_fn(grad_op):
             grad_self = z._apply_elementwise(grad_op, tanh_data, lambda g, y: g * (1 - y ** 2))
@@ -55,7 +55,7 @@ class ActivationFunction:
 
 
     @staticmethod
-    def softmax(z):
+    def softmax(z, req_grad=False):
         """Computes the softmax of z"""
         z_max_per_col = [max(col) for col in zip(*z.data)]
 
@@ -74,7 +74,7 @@ class ActivationFunction:
             normalized_row = [x / sum_exp_per_col[j] for j, x in enumerate(row)]
             result_data.append(normalized_row)
 
-        out = TensorT(result_data, _op='softmax', _parent=(z,))
+        out = TensorT(result_data, _op='softmax', _parent=(z,), req_grad=req_grad)
 
         def backward_fn(grad_op):
 
@@ -94,10 +94,10 @@ class ActivationFunction:
 
 
     @staticmethod
-    def leaky_relu(z, alpha=0.01):
+    def leaky_relu(z, alpha=0.01, req_grad=False):
         """Computes the Leaky ReLU of z as single semantic operation"""
         result_data = z._apply_unary(z.data, lambda x: x if x > 0 else alpha * x)
-        out = TensorT(result_data, _op='leaky_relu', _parent=(z,))
+        out = TensorT(result_data, _op='leaky_relu', _parent=(z,), req_grad=req_grad)
 
         def backward_fn(grad_op):
             grad_self = z._apply_elementwise(grad_op, z.data, lambda g, x: g * (1.0 if x > 0 else alpha))
@@ -108,10 +108,10 @@ class ActivationFunction:
 
 
     @staticmethod
-    def elu(z, alpha=1.0):
+    def elu(z, alpha=1.0, req_grad=False):
         """Computes the Exponential Linear Unit of z as single semantic operation"""
         result_data = z._apply_unary(z.data, lambda x: x if x >= 0 else alpha * (math.exp(x) - 1))
-        out = TensorT(result_data, _op='elu', _parent=(z,))
+        out = TensorT(result_data, _op='elu', _parent=(z,), req_grad=req_grad)
 
         def backward_fn(grad_op):
             grad_self = z._apply_elementwise(grad_op, z.data, lambda g, x: g * (1.0 if x >= 0 else alpha * math.exp(x)))
@@ -122,13 +122,13 @@ class ActivationFunction:
 
 
     @staticmethod
-    def swish(z, beta=1.0):
+    def swish(z, beta=1.0, req_grad=False):
         """Computes the Swish activation function."""
         beta_z = z * beta
         sig_result = ActivationFunction.sigmoid(beta_z)
         result_data = z._apply_elementwise(z.data, sig_result.data, lambda x, y: x * y)
 
-        out = TensorT(result_data, _op='swish', _parent=(z,))
+        out = TensorT(result_data, _op='swish', _parent=(z,), req_grad=req_grad)
 
         def backward_fn(grad_op):
             sig_data = sig_result.data
@@ -140,10 +140,10 @@ class ActivationFunction:
 
 
     @staticmethod
-    def softplus(z):
+    def softplus(z, req_grad=False):
         """Computes the Softplus activation function."""
         result_data = z._apply_unary(z.data, lambda x: math.log(1 + math.exp(-abs(x))) + max(x, 0))
-        out = TensorT(result_data, _op='softplus', _parent=(z,))
+        out = TensorT(result_data, _op='softplus', _parent=(z,), req_grad=req_grad)
     
         def backward_fn(grad_op):
             grad_self = z._apply_elementwise(grad_op, z.data, lambda g, x: g * (1 / (1 + math.exp(-x))))
@@ -153,10 +153,10 @@ class ActivationFunction:
         return out
     
     @staticmethod
-    def identity(z):
+    def identity(z, req_grad=False):
         """Identity activation function."""
         result_data = z.data
-        out = TensorT(result_data, _op='identity', _parent=(z,))
+        out = TensorT(result_data, _op='identity', _parent=(z,), req_grad=req_grad)
 
         def backward_fn(grad_op):
             grad_self = grad_op  # Identity derivative is 1

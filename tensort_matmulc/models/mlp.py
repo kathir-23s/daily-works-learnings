@@ -8,7 +8,7 @@ import time
 from core.ActivationFunctions import ActivationFunction
 from core.WeightInitialization import WeightInitializer
 from core.LossFunctions import LossFunction
-from matmul_c_tensorT import TensorT
+from tensorT_v3 import TensorT
 import pickle
 
 class MLP:

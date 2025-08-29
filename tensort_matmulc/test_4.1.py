@@ -16,11 +16,10 @@ from sklearn.datasets import fetch_openml
 # from tensorflow.keras.datasets import mnist
 import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-from matmul_c_tensorT import TensorT
+from tensorT_v3 import TensorT
 from models.mlp import MLP
+from graph_lib.cg_viz2 import visualize_tensor_op_graph
 
-
-# os.environ["OMP_NUM_THREADS"] = "8"
 
 
 
@@ -116,7 +115,13 @@ def train_debug(self, X, Y, X_val=None, Y_val=None, epochs=10, print_every=1):
         # Forward + loss
         AL = self.forward(X)
         loss = self.cost(Y, AL)
-
+        visualize_tensor_op_graph(
+            self, AL,
+            file_name=f"epoch_{ep:02d}",
+            out_dir="",
+            show_shapes=True,
+            show_grads=False   # flip to False if you want a clean diagram
+        )
         # Backprop
         loss.zero_grad()
         loss.backward()
@@ -324,7 +329,7 @@ def run_train(
 
 def main():
     # Default run: minibatch, 10 epochs, bs=128
-    run_train(use_minibatch=False, epochs=10, batch_size=128, shuffle=True)
+    run_train(use_minibatch=False, epochs=1, batch_size=128, shuffle=True)
 
 if __name__ == "__main__":
     main()

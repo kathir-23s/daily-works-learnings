@@ -210,3 +210,11 @@ __marimo__/
 *-ubyte
 *.domain 
 *.pkl 
+*.pdf 
+*_graph*
+*.png
+/*.png
+text/vnd.graphviz
+spam/
+
+predictions_*

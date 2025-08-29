@@ -4,7 +4,7 @@ import ctypes
 from ctypes import c_int, c_double, POINTER
 
 # Adjust path if needed (e.g., absolute path to your .so)
-_lib = ctypes.CDLL(os.path.join(os.path.dirname(__file__), "libfastmatmul2.so"))
+_lib = ctypes.CDLL(os.path.join(os.path.dirname(__file__), "c_objects/libfastmatmul2.so"))
 
 # void matmul(const double* A, const double* B, double* C, int m, int k, int n)
 _lib.matmul.argtypes = [
@@ -46,7 +46,7 @@ def matmul_ll(A_ll, B_ll):
     m = len(A_ll);    k = len(A_ll[0]) if m else 0
     k2 = len(B_ll);   n = len(B_ll[0]) if k2 else 0
     if k != k2:
-        raise ValueError("Incompatible shapes: A(m×k) and B(k×n)")
+        raise ValueError("Incompatible shapes: A(mxk) and B(kxn)")
 
     A_buf = _flatten_row_major(A_ll, m, k)
     B_buf = _flatten_row_major(B_ll, k, n)

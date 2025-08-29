@@ -1,5 +1,5 @@
 
-from matmul_c_tensorT import TensorT
+from tensorT_v3 import TensorT
 
 class LossFunction:
 

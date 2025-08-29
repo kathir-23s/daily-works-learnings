@@ -2,5 +2,6 @@
     "files.associations": {
         "*.cpp": "cpp",
         "chrono": "cpp"
-    }
+    },
+    "editor.quickSuggestionsDelay": 2
 }
