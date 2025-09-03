@@ -2,6 +2,7 @@
 __pycache__/
 *.py[codz]
 *$py.class
+.vscode/
 
 # C extensions
 *.so
@@ -218,3 +219,7 @@ text/vnd.graphviz
 spam/
 
 predictions_*
+objects/
+
+branch_test/
+branch_test2/
