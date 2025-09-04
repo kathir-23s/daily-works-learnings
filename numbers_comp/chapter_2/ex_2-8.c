@@ -6,7 +6,8 @@ unsigned int hammingDistance(unsigned short x, unsigned short y) {
 
     while (xor_val) {
         distance += (xor_val & 1);   
-        xor_val >>= 1;               }
+        xor_val >>= 1;               
+    }
 
     return distance;
 }

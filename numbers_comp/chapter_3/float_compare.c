@@ -16,7 +16,7 @@ int fp_compare (float a, float b){
     // if (x.d == y.d) return 0;
 
     if ((x.d == (int)0x80000000) && (y.d==0) || 
-    (y.d == (int)0x80000000) && (x.d==0) || (x.d == y.d)); 
+    (y.d == (int)0x80000000) && (x.d==0) || (x.d == y.d)) return 0; 
 
     if (x.d < y.d) return -1;
     return 1;
@@ -37,7 +37,7 @@ int fp_greaterthan(float a, float b){
 int main(){
     float a, b;
 
-    a = 3.12, b = 3.13;
+    a = 3.13, b = 3.13;
     printf("3.13 == 3.13: %d %d\n", fp_eq(a,b), a==b);
 
     a = 3.1; b = 3.13;
