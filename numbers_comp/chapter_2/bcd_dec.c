@@ -42,7 +42,8 @@ unsigned int binary_to_bcd(unsigned int x) {
     unsigned int bcd = 0, shift = 0;
     while (x > 0) {
         unsigned int digit = x % 10;
-        bcd |= (digit << (shift * 4));
+        unsigned int shifted_digit = digit << (shift * 4);
+        bcd = bcd | shifted_digit;
         x /= 10;
         shift++;
     }
