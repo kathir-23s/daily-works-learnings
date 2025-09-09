@@ -223,3 +223,5 @@ objects/
 
 branch_test/
 branch_test2/
+*.o
+*.so
